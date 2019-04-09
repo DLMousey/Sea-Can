@@ -18,7 +18,7 @@ class ContainerItem extends Component {
 
     render() {
         return(
-            <div className="col-sm-4">
+            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
                 <div className="card">
                     <div className="card-body">
                         <div className="row">
@@ -27,22 +27,22 @@ class ContainerItem extends Component {
                             </div>
                             <div className="col-sm-12">
                                 <div className="row">
-                                    <div className="col-sm-3">
+                                    <div className="col-sm-12 col-md-12 col-lg-3">
                                         <small className="text-bold">Container ID</small>
                                     </div>
-                                    <div className="col-sm-9">
+                                    <div className="col-sm-12 col-md-12 col-lg-9">
                                         <small className="text-uppercase">{this.props.container.Id}</small>
                                     </div>
-                                    <div className="col-sm-3">
+                                    <div className="col-sm-12 col-md-12 col-lg-3">
                                         <small className="text-bold">Image</small>
                                     </div>
-                                    <div className="col-sm-9">
+                                    <div className="col-sm-12 col-md-12 col-lg-9">
                                         <small className="text-uppercase">{this.props.container.Image}</small>
                                     </div>
-                                    <div className="col-sm-3">
+                                    <div className="col-sm-12 col-md-12 col-lg-3">
                                         <small className="text-bold">Status</small>
                                     </div>
-                                    <div className="col-sm-9">
+                                    <div className="col-sm-12 col-md-12 col-lg-9">
                                         <small className="text-uppercase">{this.props.container.Status}</small>
                                     </div>
                                 </div>
