@@ -6,8 +6,17 @@ class ContainerItem extends Component {
         this.state = {};
     }
 
+    restartContainer = () => {
+        const container = this.props.container;
+        fetch(`//localhost:2376/v1.24/containers/${container.Id}/restart`, {
+            method: 'POST'
+        }).then(res => res.json())
+          .then((result) => {
+            console.log(result);
+          });
+    }
+
     render() {
-        console.log(this.props.container);
         return(
             <div className="col-sm-4">
                 <div className="card">
@@ -37,6 +46,10 @@ class ContainerItem extends Component {
                                         <small className="text-uppercase">{this.props.container.Status}</small>
                                     </div>
                                 </div>
+                            </div>
+                            <hr />
+                            <div className="col-sm-12">
+                                <button className="btn btn-secondary" onClick={this.restartContainer}>Restart</button>
                             </div>
                         </div>
                     </div>
