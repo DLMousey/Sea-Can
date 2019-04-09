@@ -43,6 +43,20 @@ class ContainerList extends Component {
         return states;
     }
 
+    sectionIcon(state) {
+        const stateMap = {
+            'exited': 'fa fa-stop-circle',
+            'running': 'fa fa-play-circle',
+            'paused': 'fa fa-pause-circle'
+        };
+
+        return stateMap[state];
+    }
+
+    sectionTitle(state) {
+        return state.charAt(0).toUpperCase() + state.slice(1) + ' Containers';
+    }
+
     render() {
         if(!this.state.isLoaded) {
             return (
@@ -54,14 +68,19 @@ class ContainerList extends Component {
             const states = this.groupedContainers();
 
             return(
-                <div>
+                <div className="row">
                     {Object.keys(states).map((state) => {
                         return (
-                            <div>
-                                <h2>{state}</h2>
-                                {states[state].map((container) => {
-                                    return <ContainerItem container={container} />
-                                })}
+                            <div className="col-sm-12">
+                                <div className="col-sm-12 no-pad">
+                                    <h2><i className={this.sectionIcon(state)}></i> {this.sectionTitle(state)}</h2>
+                                </div>
+                                <div className="row">
+                                    {states[state].map((container) => {
+                                        return <ContainerItem container={container} />
+                                    })}
+                                </div>
+                                <hr />
                             </div>
                         );
                     })}

@@ -9,27 +9,37 @@ class ContainerItem extends Component {
     render() {
         console.log(this.props.container);
         return(
-            <div className="card">
-                <div className="card-body">
-                    <h5 className="card-title">{this.props.container.Names[0].replace('/', '')}</h5>
-                    <p className="card-text">
-                        <ul>
-                            <li>
-                                Id: {this.props.container.Id}
-                            </li>
-                            <li>
-                                Image: {this.props.container.Image}
-                            </li>
-                            <li>
-                                Status: {this.props.container.Status}
-                            </li>
-                            {/* <li> */}
-                                {/* Labels: {this.props.container.Labels.map((value, index) => { */}
-                                    {/* return <span>{index} - {value}</span> */}
-                                {/* })} */}
-                            {/* </li> */}
-                        </ul>
-                    </p>
+            <div className="col-sm-4">
+                <div className="card">
+                    <div className="card-body">
+                        <div className="row">
+                            <div className="col-sm-12">
+                                <h5 className="card-title">{this.props.container.Names[0].replace('/', '')}</h5>
+                            </div>
+                            <div className="col-sm-12">
+                                <div className="row">
+                                    <div className="col-sm-3">
+                                        <small className="text-bold">Container ID</small>
+                                    </div>
+                                    <div className="col-sm-9">
+                                        <small className="text-uppercase">{this.props.container.Id}</small>
+                                    </div>
+                                    <div className="col-sm-3">
+                                        <small className="text-bold">Image</small>
+                                    </div>
+                                    <div className="col-sm-9">
+                                        <small className="text-uppercase">{this.props.container.Image}</small>
+                                    </div>
+                                    <div className="col-sm-3">
+                                        <small className="text-bold">Status</small>
+                                    </div>
+                                    <div className="col-sm-9">
+                                        <small className="text-uppercase">{this.props.container.Status}</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         );

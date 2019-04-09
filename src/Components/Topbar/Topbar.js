@@ -6,10 +6,10 @@ class Topbar extends Component {
         return(
             <div className="col-sm-12 no-pad d-flex align-items-center topbar-container">
                 <div className="col-sm-2 topbar">
-                    BRAND
+                    SeaCan
                 </div>
                 <div className="col">
-                    LINKS
+                    Smartarse tagline/useful info here
                 </div>
             </div>
         );
