@@ -7,16 +7,42 @@
     list-style: none;
     padding: 0;
     margin-top: 0.5em;
+
+    a {
+        color: #333;
+        text-decoration: none;
+
+        &:hover {
+            color: #ebebeb;
+        }
+    }
+}
+
+a.active-link > .sidebar-link-item {
+    padding: 12px;
+    color: #EBEBEB;
+    background: #333;
+    border-bottom: 1px solid darken(#ebebeb, 5%);
+    transition: background 0.1s ease-in-out;
+
+    & > * { color: #ebebeb; }
 }
 
 .sidebar-link-item {
     padding: 12px;
     border-bottom: 1px solid darken(#ebebeb, 5%);
-    transition: all 0.15s ease-in;
+    transition: background 0.1s ease-in-out;
 
-    &:hover {
+    &:hover, &.active-link {
         background: #333;
-        color: #fff;
         cursor: pointer;
+
+        & > i {
+            color: #ebebeb;
+        }
+
+        & > a {
+            color: #ebebeb;
+        }
     }
 }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ContainerItem from './Components/ContainerItem/ContainerItem';
+import ContainerItem from './../ContainerItem/ContainerItem'; 
 
 class ContainerList extends Component {
     constructor(props, context) {
