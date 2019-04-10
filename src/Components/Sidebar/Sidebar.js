@@ -5,12 +5,18 @@ import './Sidebar.scss'
 class Sidebar extends Component {
     render() {
         return(
-            <ul className="sidebar-links">
+            <ul className="sidebar-links pt-2">
                 <NavLink activeClassName="active-link" to="/containers">
                     <li className="sidebar-link-item">
                         <i className="fa fa-cube mr-2"></i> 
                         Containers
                     </li>                
+                </NavLink>
+                <NavLink activeClassName="active-link" to="/images">
+                    <li className="sidebar-link-item">
+                        <i className="fa fa-save mr-2"></i>
+                        Images
+                    </li>
                 </NavLink>
                 <NavLink activeClassName="active-link" to="/volumes">                
                     <li className="sidebar-link-item">

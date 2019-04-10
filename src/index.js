@@ -9,6 +9,7 @@ import * as serviceWorker from './serviceWorker';
 // App Components
 import App from './App';
 import ContainerList from './Components/ContainerList/ContainerList';
+import ImageList from './Components/ImageList/ImageList';
 import Sidebar from './Components/Sidebar/Sidebar';
 import Topbar from './Components/Topbar/Topbar';
 import NotFound from './Components/NotFound/NotFound';
@@ -23,9 +24,10 @@ const routing = (
                 <div className="col-sm-2 sidebar no-pad">
                     <Sidebar />
                 </div>
-                <div className="col">
+                <div className="col pt-3">
                     <Switch>
                         <Route exact path="/" component={App} />
+                        <Route path="/images" component={ImageList} />
                         <Route path="/containers" component={ContainerList} />
                         <Route path="/top-bar" component={Topbar} />
                         <Route component={NotFound} />
